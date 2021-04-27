@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { modes, frameworks } from '../stores';
-	const framework = 'Angular';
+	const framework = 'SvelteKit';
 </script>
 
 <svelte:head>

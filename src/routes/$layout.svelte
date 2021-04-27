@@ -27,17 +27,17 @@
 								class:hover:bg-gray-700={$page.path !== '/'}
 								class:hover:text-white={$page.path !== '/'}>Home</a
 							>
-							<!-- {#each frameworks as framework}
+							{#each frameworks as framework}
 								<a
-									href={'/' + framework}
+									href={'/' + framework.toLowerCase()}
 									class="px-3 py-2 rounded-md text-sm font-medium"
-									class:bg-gray-900={$page.path === '/' + framework}
-									class:text-white={$page.path === '/' + framework}
-									class:text-gray-300={$page.path !== '/' + framework}
-									class:hover:bg-gray-700={$page.path !== '/' + framework}
-									class:hover:text-white={$page.path !== '/' + framework}>{framework}</a
+									class:bg-gray-900={$page.path === '/' + framework.toLowerCase()}
+									class:text-white={$page.path === '/' + framework.toLowerCase()}
+									class:text-gray-300={$page.path !== '/' + framework.toLowerCase()}
+									class:hover:bg-gray-700={$page.path !== '/' + framework.toLowerCase()}
+									class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}>{framework}</a
 								>
-							{/each} -->
+							{/each}
 						</div>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 					<div class="ml-4 flex items-center md:ml-6">
 						<a
 							href="https://github.com/lighthouse-test/lighthouse-test.github.io"
-							rel="external"
+							rel="noopener"
 							target="_blank"
 							class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
 						>
@@ -76,11 +76,6 @@
 						}}
 					>
 						<span class="sr-only">Open main menu</span>
-						<!--
-              Heroicon name: outline/menu
-
-              Menu open: "hidden", Menu closed: "block"
-            -->
 						<svg
 							class="block h-6 w-6"
 							xmlns="http://www.w3.org/2000/svg"
@@ -134,18 +129,17 @@
 						class:hover:bg-gray-700={$page.path !== '/'}
 						class:hover:text-white={$page.path !== '/'}>Home</a
 					>
-
-					<!-- {#each frameworks as framework}
+					{#each frameworks as framework}
 						<a
-							href={'/' + framework}
+							href={'/' + framework.toLowerCase()}
 							class="block px-3 py-2 rounded-md text-sm font-medium"
-							class:bg-gray-900={$page.path === '/' + framework}
-							class:text-white={$page.path === '/' + framework}
-							class:text-gray-300={$page.path !== '/' + framework}
-							class:hover:bg-gray-700={$page.path !== '/' + framework}
-							class:hover:text-white={$page.path !== '/' + framework}>{framework}</a
+							class:bg-gray-900={$page.path === '/' + framework.toLowerCase()}
+							class:text-white={$page.path === '/' + framework.toLowerCase()}
+							class:text-gray-300={$page.path !== '/' + framework.toLowerCase()}
+							class:hover:bg-gray-700={$page.path !== '/' + framework.toLowerCase()}
+							class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}>{framework}</a
 						>
-					{/each} -->
+					{/each}
 				</div>
 			</div>
 		{/if}

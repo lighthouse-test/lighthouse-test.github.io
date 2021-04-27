@@ -1,39 +1,59 @@
-<script context="module">
-	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+<script lang="ts">
+	import { modes, frameworks } from '../stores';
+	const framework = 'Nuxt';
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>LightHouse Test</title>
 </svelte:head>
 
-<div class="content">
-	<h1>About this app</h1>
+<header class="bg-white shadow">
+	<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+		<h1 class="text-3xl font-bold text-gray-900">{framework} Lighthouse Test Results</h1>
+	</div>
+</header>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<!-- TODO lose the @next! -->
-	<pre>npm init svelte@next</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+	<div class="px-4 py-6 sm:px-0">
+		<table width="100%">
+			<thead>
+				<tr>
+					<th align="left">Cateogry</th>
+					<th align="right">SPA</th>
+					<th align="right">SSR</th>
+					<th align="right">Static</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each categories as category}
+				<tr>
+					<th align="left">
+						<a class="font-semibold" href={'https://github.com/lighthouse-test/' + framework}
+							>{category}</a
+						>
+					</th>
+					{#each modes as mode}
+					<td align="right">
+						<a
+							href={'https://lighthouse-test.github.io/' + framework.toLowerCase() + '/' +  mode.toLowerCase() + '/_lighthouse/_.report.html'}
+							rel="noopener"
+							target="_blank"
+						>
+							<img
+								src={'https://raw.githubusercontent.com/lighthouse-test/' +
+									framework.toLowerCase() + '/gh-pages/' + mode.toLowerCase() + 
+ 								'/_lighthouse/_.' + category + '.svg'}
+							/>
+						</a>
+					</td>
+					{/each}
+				</tr>
+				{/each}
+			</tbody>
+		</table>
+		
+	</div>
+	<!-- /End replace -->
 </div>
 
 <style style lang="postcss"></style>

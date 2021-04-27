@@ -1,5 +1,8 @@
 <h1 align="center">Welcome to @lighthouse-test 👋</h1>
 <p>
+  <a href="https://github.com/lighthouse-test/badge-generator/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
   <a href="https://github.com/lighthouse-test/lighthouse-test.github.io/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/badge-generator" />
   </a>
@@ -8,7 +11,7 @@
   </a>
 </p>
 
-> This repository is created to study how performance of framworks affected with different UI frameworks and how it compares with each other with factors like lazy loading. This repository would display lighthouse results collected from differnt frameworks.
+> This repository is created to study how performance of framworks is affected with different UI frameworks and how it compares with each other with different modes such as SPA, SSR and Static. This repository would display lighthouse results collected from different frameworks.
 
 ### 🏠 [Lighthouse Results](https://lighthouse-test.github.io)
 

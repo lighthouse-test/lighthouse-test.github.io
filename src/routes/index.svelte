@@ -1,10 +1,5 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
-	import Results from '$lib/Results.svelte';
-	import { frameworks } from '../stores';
+	import { modes, frameworks } from '../stores';
 </script>
 
 <svelte:head>
@@ -18,16 +13,44 @@
 </header>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-	<h2 class="text-xl">Static pre-renderd hello-world without any UI framework</h2>
 	<div class="px-4 py-6 sm:px-0">
-		{#each frameworks as framework}
-			<div class="grid grid-cols-6 gap-y-3">
-				<a class="font-semibold" href={'https://github.com/lighthouse-test/' + framework}
-					>{framework}</a
-				>
-				<Results {framework} path={'_index_html'} />
-			</div>
-		{/each}
+		<table width="100%">
+			<thead>
+				<tr>
+					<th align="left">Framework & UI</th>
+					<th align="right">SPA</th>
+					<th align="right">SSR</th>
+					<th align="right">Static</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each frameworks as framework}
+				<tr>
+					<th align="left">
+						<a class="font-semibold" href={'https://github.com/lighthouse-test/' + framework}
+							>{framework}</a
+						>
+					</th>
+					{#each modes as mode}
+					<td align="right">
+						<a
+							href={'https://lighthouse-test.github.io/' + framework.toLowerCase() + '/' +  mode.toLowerCase() + '/_lighthouse/_.report.html'}
+							rel="noopener"
+							target="_blank"
+						>
+							<img
+								src={'https://raw.githubusercontent.com/lighthouse-test/' +
+									framework.toLowerCase() + '/gh-pages/' + mode.toLowerCase() + 
+ 								'/_lighthouse/_.performance.svg'}
+							/>
+						</a>
+					</td>
+					{/each}
+				</tr>
+				{/each}
+			</tbody>
+		</table>
+		
 	</div>
 	<!-- /End replace -->
 </div>
