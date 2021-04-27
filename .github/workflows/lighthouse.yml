@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build_and_publish:
     runs-on: ubuntu-latest
     env: 
       BUILD_PATH: 'build'
@@ -20,6 +20,11 @@ jobs:
           node-version: "14"
       - run: yarn install
       - run: yarn build
+      - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
+      - run: lhci autorun
+      - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - name: Deploy Build & Results to Github Pages 
         uses: peaceiris/actions-gh-pages@v3.7.3

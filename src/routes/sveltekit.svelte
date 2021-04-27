@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { modes, frameworks } from '../stores';
+	import { modes, categories } from '../stores';
 	const framework = 'SvelteKit';
 </script>
 
