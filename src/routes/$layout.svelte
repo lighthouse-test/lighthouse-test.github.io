@@ -35,7 +35,8 @@
 									class:text-white={$page.path === '/' + framework.toLowerCase()}
 									class:text-gray-300={$page.path !== '/' + framework.toLowerCase()}
 									class:hover:bg-gray-700={$page.path !== '/' + framework.toLowerCase()}
-									class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}>{framework}</a
+									class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}
+									>{framework}</a
 								>
 							{/each}
 						</div>

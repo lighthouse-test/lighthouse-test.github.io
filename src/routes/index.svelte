@@ -25,32 +25,37 @@
 			</thead>
 			<tbody>
 				{#each frameworks as framework}
-				<tr>
-					<th align="left">
-						<a class="font-semibold" href={'https://github.com/lighthouse-test/' + framework}
-							>{framework}</a
-						>
-					</th>
-					{#each modes as mode}
-					<td align="right">
-						<a
-							href={'https://lighthouse-test.github.io/' + framework.toLowerCase() + '/' +  mode.toLowerCase() + '/_lighthouse/_.report.html'}
-							rel="noopener"
-							target="_blank"
-						>
-							<img
-								src={'https://raw.githubusercontent.com/lighthouse-test/' +
-									framework.toLowerCase() + '/gh-pages/' + mode.toLowerCase() + 
- 								'/_lighthouse/_.performance.svg'}
-							/>
-						</a>
-					</td>
-					{/each}
-				</tr>
+					<tr>
+						<th align="left">
+							<a class="font-semibold" href={'https://github.com/lighthouse-test/' + framework}
+								>{framework}</a
+							>
+						</th>
+						{#each modes as mode}
+							<td align="right">
+								<a
+									href={'https://lighthouse-test.github.io/' +
+										framework.toLowerCase() +
+										'/' +
+										mode.toLowerCase() +
+										'/_lighthouse/_.report.html'}
+									rel="noopener"
+									target="_blank"
+								>
+									<img
+										src={'https://lighthouse-test.github.io/' +
+											framework.toLowerCase() +
+											'/' +
+											mode.toLowerCase() +
+											'/_lighthouse/_.performance.svg'}
+									/>
+								</a>
+							</td>
+						{/each}
+					</tr>
 				{/each}
 			</tbody>
 		</table>
-		
 	</div>
 	<!-- /End replace -->
 </div>
