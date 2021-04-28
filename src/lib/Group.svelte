@@ -74,6 +74,8 @@
 									>
 									<img
 										class="badge float-right w-28 max-w-max"
+										width="112"
+										height="20"
 										alt={framework.name + ' lighthouse ' + category.path}
 										src={'https://lighthouse-test.github.io/' +
 											framework.path +
