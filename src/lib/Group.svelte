@@ -47,7 +47,6 @@
 					<tr>
 						<th class="text-left">
 							<a
-								class="font-semibold"
 								href={'https://github.com/lighthouse-test/' + framework.path}
 								rel="noopener"
 								target="_blank"
@@ -74,7 +73,7 @@
 											' result'}</span
 									>
 									<img
-										class="float-right w-28 max-w-max"
+										class="badge float-right w-28 max-w-max"
 										alt={framework.name + ' lighthouse ' + category.path}
 										src={'https://lighthouse-test.github.io/' +
 											framework.path +

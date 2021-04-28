@@ -1,3 +1,4 @@
+import type Group from "$lib/interfaces/group";
 export const url = 'https://lighthouse-test.github.io';
 export const modes = [
 	{ name: 'SPA', path: 'spa' },
@@ -12,7 +13,7 @@ export const categories = [
 	{ name: 'PWA', path: 'pwa' }
 ];
 
-export const groups = [
+export const groups: Group[] = [
 	{
 		name: 'Svelte',
 		path: 'svelte',

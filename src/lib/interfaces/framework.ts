@@ -4,5 +4,5 @@ export default interface Framework {
 	name: string;
 	path: string;
 	web: string;
-	modes: ModeStatus;
+	modes?: ModeStatus;
 }

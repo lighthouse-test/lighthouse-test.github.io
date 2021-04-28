@@ -1,3 +1,7 @@
+<script context="module">
+	export const hydrate = false;
+</script>
+
 <script lang="ts">
 	import { groups } from '../stores';
 	import Group from '$lib/Group.svelte';

@@ -1,3 +1,7 @@
+<script context="module">
+	export const hydrate = false;
+</script>
+
 <script lang="ts">
 	import { modes, groups } from '../stores';
 </script>
@@ -56,7 +60,9 @@
 										target="_blank"
 									>
 										<img
-											class="float-right w-28 max-w-max"
+											class="badge float-right w-28 max-w-max"
+											width="112"
+											height="20"
 											alt={framework.name + ' lighthouse performance result'}
 											src={'https://lighthouse-test.github.io/' +
 												framework.path +
