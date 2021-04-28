@@ -14,14 +14,14 @@
 </header>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-	<div class="px-4 py-6 sm:px-0">
-		<table width="100%">
+	<div class="px-4 py-6 sm:px-0 overflow-x-scroll">
+		<table class="w-full">
 			<thead>
 				<tr>
 					<th />
-					<th align="left">Framework & UI</th>
+					<th class="text-left">Framework & UI</th>
 					{#each modes as mode}
-						<th align="right">{mode.name}</th>
+						<th class="text-right">{mode.name}</th>
 					{/each}
 				</tr>
 			</thead>
@@ -29,19 +29,23 @@
 				{#each groups as group}
 					{#each group.frameworks as framework}
 						<tr>
-							<th align="left"
+							<th class="text-left"
 								>{group.name}
-								<small>(<a href={group.web} rel="noopener" target="_blank">{group.web}</a>)</small
+								<small class="hidden lg:inline-flex"
+									>(<a href={group.web} rel="noopener" target="_blank">{group.web}</a>)</small
 								></th
 							>
-							<th align="left">
-								<a
-									class="font-semibold"
-									href={'https://github.com/lighthouse-test/' + framework.path}>{framework.name}</a
+							<th class="text-left">
+								{framework.name}
+								<small class="hidden lg:inline-flex"
+									>(<a
+										class="font-semibold"
+										href={'https://github.com/lighthouse-test/' + framework.path}>repo</a
+									>)</small
 								>
 							</th>
 							{#each modes as mode}
-								<td align="right">
+								<td class="text-right">
 									<a
 										href={'https://lighthouse-test.github.io/' +
 											framework.path +
@@ -52,7 +56,7 @@
 										target="_blank"
 									>
 										<img
-											class="w-28	min-w-max"
+											class="float-right w-28 max-w-max"
 											alt={framework.name + ' lighthouse performance result'}
 											src={'https://lighthouse-test.github.io/' +
 												framework.path +

@@ -9,26 +9,28 @@
 	<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 		<h1 class="text-3xl font-bold text-gray-900">
 			Lighthouse Test Results {group.name}
-			<small><a href={group.web} rel="noopener" target="_blank">({group.web})</a></small>
+			<small class="hidden lg:inline-flex"
+				><a href={group.web} rel="noopener" target="_blank">({group.web})</a></small
+			>
 		</h1>
 	</div>
 </header>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-	<div class="px-4 py-6 sm:px-0">
-		<table width="100%">
+	<div class="px-4 py-6 sm:px-0 overflow-x-scroll">
+		<table class="w-full">
 			{#each group.frameworks as framework}
 				<tr>
-					<th align="left"
+					<th class="text-left"
 						>{framework.name}
-						<small
+						<small class="hidden lg:inline-flex"
 							>(<a href={framework.web} rel="noopener" target="_blank">{framework.web}</a>)</small
 						></th
 					>
 					{#each modes as mode}
-						<th align="right"
+						<th class="text-right"
 							>{mode.name}
-							<small
+							<small class="hidden lg:inline-flex"
 								>(<a
 									href={'https://github.com/lighthouse-test/' +
 										framework.path +
@@ -43,7 +45,7 @@
 				</tr>
 				{#each categories as category}
 					<tr>
-						<th align="left">
+						<th class="text-left">
 							<a
 								class="font-semibold"
 								href={'https://github.com/lighthouse-test/' + framework.path}
@@ -53,7 +55,7 @@
 							>
 						</th>
 						{#each modes as mode}
-							<td align="right">
+							<td class="justify-right">
 								<a
 									href={'https://lighthouse-test.github.io/' +
 										framework.path +
@@ -66,13 +68,14 @@
 									<span class="hidden"
 										>{framework.name +
 											' ' +
-											mode.name +
+											mode.path +
 											' mode lighthouse ' +
-											category.name +
+											category.path +
 											' result'}</span
 									>
 									<img
-										alt={framework.name + ' lighthouse ' + category.name}
+										class="float-right w-28 max-w-max"
+										alt={framework.name + ' lighthouse ' + category.path}
 										src={'https://lighthouse-test.github.io/' +
 											framework.path +
 											'/' +
