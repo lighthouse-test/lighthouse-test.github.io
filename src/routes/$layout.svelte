@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import '../app.postcss';
 
-	import { frameworks } from '../stores';
+	import { groups } from '../stores';
 
 	let showMobileMenu = false;
 </script>
@@ -27,16 +27,15 @@
 								class:hover:bg-gray-700={$page.path !== '/'}
 								class:hover:text-white={$page.path !== '/'}>Home</a
 							>
-							{#each frameworks as framework}
+							{#each groups as group}
 								<a
-									href={'/' + framework.toLowerCase()}
+									href={'/' + group.path}
 									class="px-3 py-2 rounded-md text-sm font-medium"
-									class:bg-gray-900={$page.path === '/' + framework.toLowerCase()}
-									class:text-white={$page.path === '/' + framework.toLowerCase()}
-									class:text-gray-300={$page.path !== '/' + framework.toLowerCase()}
-									class:hover:bg-gray-700={$page.path !== '/' + framework.toLowerCase()}
-									class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}
-									>{framework}</a
+									class:bg-gray-900={$page.path === '/' + group.path}
+									class:text-white={$page.path === '/' + group.path}
+									class:text-gray-300={$page.path !== '/' + group.path}
+									class:hover:bg-gray-700={$page.path !== '/' + group.path}
+									class:hover:text-white={$page.path !== '/' + group.path}>{group.name}</a
 								>
 							{/each}
 						</div>
@@ -130,15 +129,15 @@
 						class:hover:bg-gray-700={$page.path !== '/'}
 						class:hover:text-white={$page.path !== '/'}>Home</a
 					>
-					{#each frameworks as framework}
+					{#each groups as group}
 						<a
-							href={'/' + framework.toLowerCase()}
+							href={'/' + group.path}
 							class="block px-3 py-2 rounded-md text-sm font-medium"
-							class:bg-gray-900={$page.path === '/' + framework.toLowerCase()}
-							class:text-white={$page.path === '/' + framework.toLowerCase()}
-							class:text-gray-300={$page.path !== '/' + framework.toLowerCase()}
-							class:hover:bg-gray-700={$page.path !== '/' + framework.toLowerCase()}
-							class:hover:text-white={$page.path !== '/' + framework.toLowerCase()}>{framework}</a
+							class:bg-gray-900={$page.path === '/' + group.path}
+							class:text-white={$page.path === '/' + group.path}
+							class:text-gray-300={$page.path !== '/' + group.path}
+							class:hover:bg-gray-700={$page.path !== '/' + group.path}
+							class:hover:text-white={$page.path !== '/' + group.path}>{group.name}</a
 						>
 					{/each}
 				</div>

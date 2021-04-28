@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { groups } from '../stores';
 	import Group from '$lib/Group.svelte';
-	const group = groups.filter((group) => group.name === 'Angular')[0];
+	const group = groups.filter((group) => group.name === 'Svelte')[0];
 </script>
 
 <svelte:head>
