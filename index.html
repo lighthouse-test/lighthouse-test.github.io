@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>LightHouse Test</title><meta name="description" content="Lighthouse test result comparison" data-svelte="svelte-163z23r">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#333333" />
+	<link rel="icon" href="/favicon.ico" />
+	<link rel="manifest" href="manifest.json" />
+	<link rel="apple-touch-icon" href="/logo-192.png">
+	<link rel="canonical" href="https://lighthouse-test.github.io" />
+	<title>LightHouse Test</title><meta name="description" content="Lighthouse test result comparison" data-svelte="svelte-163z23r">
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-fe6facec.js">
+		<link rel="modulepreload" href="/./_app/start-7f4771cf.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-c8377338.js">
-		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-c798f605.js">
+		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-dc6ad9ed.js">
 		<link rel="modulepreload" href="/./_app/chunks/stores-b9c45627.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-575677e9.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-7ab682db.js">
 		<link rel="stylesheet" href="/./_app/assets/start-0826e215.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/$layout.svelte-b668ebf3.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/$layout.svelte-3f3efd6a.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-fe6facec.js";
+			import { start } from "/./_app/start-7f4771cf.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":"/."},
@@ -25,25 +30,13 @@
 				host: location.host,
 				route: true,
 				spa: false,
-				hydrate: {
-					status: 200,
-					error: null,
-					nodes: [
-						import("/./_app/pages/$layout.svelte-c798f605.js"),
-						import("/./_app/pages/index.svelte-575677e9.js")
-					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "/",
-						query: new URLSearchParams(""),
-						params: {}
-					}
-				}
+				hydrate: null
 			});
 		</script>
-	</head>
-	<body>
-		<div id="svelte">
+</head>
+
+<body>
+	<div id="svelte">
 
 
 
@@ -65,43 +58,48 @@
 
 <header class="bg-white shadow"><div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"><h1 class="text-3xl font-bold text-gray-900">Lighthouse Test Results</h1></div></header>
 
-<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><div class="px-4 py-6 sm:px-0"><table width="100%"><thead><tr><th></th>
-			<th align="left">Framework &amp; UI</th>
-			<th align="right">SPA</th><th align="right">SSR</th><th align="right">Static</th></tr></thead>
-	<tbody><tr><th align="left">Svelte
-						<small>(<a href="https://svelte.dev" rel="noopener" target="_blank">https://svelte.dev</a>)</small></th>
-					<th align="left"><a class="font-semibold" href="https://github.com/lighthouse-test/sveltekit">SvelteKit</a></th>
-					<td align="right"><a href="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.performance.svg"></a>
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><div class="px-4 py-6 sm:px-0 overflow-x-scroll"><table class="w-full"><thead><tr><th></th>
+			<th class="text-left">Framework &amp; UI</th>
+			<th class="text-right">SPA</th><th class="text-right">SSR</th><th class="text-right">Static</th></tr></thead>
+	<tbody><tr><th class="text-left">Svelte
+						<small class="hidden lg:inline-flex">(<a href="https://svelte.dev" rel="noopener" target="_blank">https://svelte.dev</a>)</small></th>
+					<th class="text-left">SvelteKit
+						<small class="hidden lg:inline-flex">(<a class="font-semibold" href="https://github.com/lighthouse-test/sveltekit">repo</a>)</small></th>
+					<td class="text-right"><a href="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="SvelteKit lighthouse performance result" src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.performance.svg"></a>
 						</td>
-				</tr><tr><th align="left">Angular
-						<small>(<a href="https://angular.io" rel="noopener" target="_blank">https://angular.io</a>)</small></th>
-					<th align="left"><a class="font-semibold" href="https://github.com/lighthouse-test/angular">Angular</a></th>
-					<td align="right"><a href="https://lighthouse-test.github.io/angular/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/spa/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/angular/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/ssr/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/angular/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/static/_lighthouse/_.performance.svg"></a>
+				</tr><tr><th class="text-left">Angular
+						<small class="hidden lg:inline-flex">(<a href="https://angular.io" rel="noopener" target="_blank">https://angular.io</a>)</small></th>
+					<th class="text-left">Angular
+						<small class="hidden lg:inline-flex">(<a class="font-semibold" href="https://github.com/lighthouse-test/angular">repo</a>)</small></th>
+					<td class="text-right"><a href="https://lighthouse-test.github.io/angular/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/spa/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/angular/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/ssr/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/angular/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular lighthouse performance result" src="https://lighthouse-test.github.io/angular/static/_lighthouse/_.performance.svg"></a>
 						</td>
-				</tr><tr><th align="left">React
-						<small>(<a href="https://reactjs.org" rel="noopener" target="_blank">https://reactjs.org</a>)</small></th>
-					<th align="left"><a class="font-semibold" href="https://github.com/lighthouse-test/next">Next</a></th>
-					<td align="right"><a href="https://lighthouse-test.github.io/next/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/spa/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/next/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/static/_lighthouse/_.performance.svg"></a>
+				</tr><tr><th class="text-left">React
+						<small class="hidden lg:inline-flex">(<a href="https://reactjs.org" rel="noopener" target="_blank">https://reactjs.org</a>)</small></th>
+					<th class="text-left">Next
+						<small class="hidden lg:inline-flex">(<a class="font-semibold" href="https://github.com/lighthouse-test/next">repo</a>)</small></th>
+					<td class="text-right"><a href="https://lighthouse-test.github.io/next/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/spa/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/next/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/static/_lighthouse/_.performance.svg"></a>
 						</td>
-				</tr><tr><th align="left">Vue
-						<small>(<a href="https://vuejs.org" rel="noopener" target="_blank">https://vuejs.org</a>)</small></th>
-					<th align="left"><a class="font-semibold" href="https://github.com/lighthouse-test/nuxt">Nuxt</a></th>
-					<td align="right"><a href="https://lighthouse-test.github.io/nuxt/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/spa/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/nuxt/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/ssr/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/nuxt/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/static/_lighthouse/_.performance.svg"></a>
+				</tr><tr><th class="text-left">Vue
+						<small class="hidden lg:inline-flex">(<a href="https://vuejs.org" rel="noopener" target="_blank">https://vuejs.org</a>)</small></th>
+					<th class="text-left">Nuxt
+						<small class="hidden lg:inline-flex">(<a class="font-semibold" href="https://github.com/lighthouse-test/nuxt">repo</a>)</small></th>
+					<td class="text-right"><a href="https://lighthouse-test.github.io/nuxt/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/spa/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/nuxt/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/ssr/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/nuxt/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Nuxt lighthouse performance result" src="https://lighthouse-test.github.io/nuxt/static/_lighthouse/_.performance.svg"></a>
 						</td>
-				</tr><tr><th align="left">Vue
-						<small>(<a href="https://vuejs.org" rel="noopener" target="_blank">https://vuejs.org</a>)</small></th>
-					<th align="left"><a class="font-semibold" href="https://github.com/lighthouse-test/quasar">Quasar</a></th>
-					<td align="right"><a href="https://lighthouse-test.github.io/quasar/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/spa/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/quasar/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/ssr/_lighthouse/_.performance.svg"></a>
-						</td><td align="right"><a href="https://lighthouse-test.github.io/quasar/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="w-28	min-w-max" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/static/_lighthouse/_.performance.svg"></a>
+				</tr><tr><th class="text-left">Vue
+						<small class="hidden lg:inline-flex">(<a href="https://vuejs.org" rel="noopener" target="_blank">https://vuejs.org</a>)</small></th>
+					<th class="text-left">Quasar
+						<small class="hidden lg:inline-flex">(<a class="font-semibold" href="https://github.com/lighthouse-test/quasar">repo</a>)</small></th>
+					<td class="text-right"><a href="https://lighthouse-test.github.io/quasar/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/spa/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/quasar/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/ssr/_lighthouse/_.performance.svg"></a>
+						</td><td class="text-right"><a href="https://lighthouse-test.github.io/quasar/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Quasar lighthouse performance result" src="https://lighthouse-test.github.io/quasar/static/_lighthouse/_.performance.svg"></a>
 						</td>
 				</tr></tbody></table></div></div></main>
 </div>
@@ -110,5 +108,6 @@
 
 	
 </div>
-	</body>
+</body>
+
 </html>
