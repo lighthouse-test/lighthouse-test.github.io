@@ -7,18 +7,18 @@ const ASSETS = `cache${timestamp}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
     caches
       .open(ASSETS)
       .then(cache => cache.addAll(to_cache))
       .then(() => {
-        self.skipWaiting();
+        ((self as any) as ServiceWorkerGlobalScope).skipWaiting();
       })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (event: ExtendableEvent) => {
   event.waitUntil(
     caches.keys().then(async keys => {
       // delete old caches
@@ -26,7 +26,7 @@ self.addEventListener('activate', event => {
         if (key !== ASSETS) await caches.delete(key);
       }
 
-      self.clients.claim();
+      ((self as any) as ServiceWorkerGlobalScope).clients.claim();
     })
   );
 });
@@ -36,7 +36,7 @@ self.addEventListener('activate', event => {
  * Fetch the asset from the network and store it in the cache. 
  * Fall back to the cache if the user is offline.
  */
-async function fetchAndCache(request) {
+async function fetchAndCache(request: Request) {
   const cache = await caches.open(`offline${timestamp}`)
 
   try {
@@ -51,7 +51,7 @@ async function fetchAndCache(request) {
   }
 }
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event: FetchEvent) => {
   if (event.request.method !== 'GET' || event.request.headers.has('range')) return;
 
   const url = new URL(event.request.url);

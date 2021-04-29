@@ -14,7 +14,17 @@
   </a>
 </p>
 
-> This repository is created to study how performance of framworks is affected with different UI frameworks and how it compares with each other with different modes such as SPA, SSR and Static. This repository would display lighthouse results collected from different frameworks.
+<p>
+  <a href="https://lighthouse-test.github.io/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/_lighthouse/_.pwa.svg" />
+  </a>
+</p>
+
+> This repository is created to study how performance of framworks is affected with different UI frameworks and how it compares with each other with different modes such as SPA, SSR and Static. This repository would display lighthouse results collected from different framework repos. These repos contain simple todo crud so that results can be comparable.
 
 ### 🏠 [Lighthouse Results](https://lighthouse-test.github.io)
 

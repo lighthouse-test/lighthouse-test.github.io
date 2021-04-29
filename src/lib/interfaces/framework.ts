@@ -1,8 +1,13 @@
 import type ModeStatus from './mode-status';
+import type Tag from './tag';
 
 export default interface Framework {
 	name: string;
-	path: string;
+	slug: string;
 	web: string;
-	modes?: ModeStatus;
+	techTag: Tag;
+	designTag?: Tag;
+	designImplementation?: string;
+	implementationWeb?: string;
+	modes: ModeStatus;
 }
