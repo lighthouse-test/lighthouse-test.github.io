@@ -8,34 +8,40 @@
 		: FRAMEWORKS;
 </script>
 
-<div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-	<div class="lg:flex lg:items-center lg:justify-between">
-		<div class="flex-1 min-w-0">
-			<h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-				{tag ? tag.name : ''} Lighthouse Results
-			</h2>
-			<div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
-				<div class="mt-2 flex items-center text-sm text-gray-500">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-						/>
-					</svg>
-					<a href={tag ? tag.web : URL} target="_blank" rel="noopener">{tag ? tag.web : URL}</a>
+{#if tag}
+	<div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
+		<div class="lg:flex lg:items-center lg:justify-between">
+			<span class="flex-shrink-0 h-12 w-12 mr-4">{@html tag.logo}</span>
+			<div class="flex-1 min-w-0">
+				<h2 class="flex text-2xl font-bold leading-12 text-gray-900 sm:text-3xl sm:truncate">
+					{tag.name} Lighthouse Results
+				</h2>
+				<div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
+					<div class="mt-2 flex items-center text-sm text-gray-500">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+							/>
+						</svg>
+						<a href={tag.web} target="_blank" rel="noopener">{tag.web}</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<br />
+{:else}
+	<br />
+{/if}
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 overflow-x-scroll">
 	<table class="min-w-full divide-y divide-gray-200">
