@@ -8,7 +8,7 @@
 	<link rel="icon" href="/favicon.ico" />
 	<link rel="manifest" href="/site.webmanifest" />
 	<link rel="apple-touch-icon" href="/logo-192.png">
-	<title>LightHouse Results | React</title><meta name="description" content="Lighthouse result comparison for react" data-svelte="svelte-13wsekd">
+	<title>LightHouse Results | Material</title><meta name="description" content="Lighthouse result comparison for material" data-svelte="svelte-13wsekd">
 
 		
 
@@ -17,7 +17,7 @@
 		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-0b2ec163.js">
 		<link rel="modulepreload" href="/./_app/chunks/stores-040fbf79.js">
 		<link rel="modulepreload" href="/./_app/chunks/stores-a36768c3.js">
-		<link rel="modulepreload" href="/./_app/pages/frameworks/[slug].svelte-ff29bfa7.js">
+		<link rel="modulepreload" href="/./_app/pages/designs/[slug].svelte-1873b4c0.js">
 		<link rel="modulepreload" href="/./_app/chunks/FrameworkTable-9d9bca65.js">
 		<link rel="stylesheet" href="/./_app/assets/start-0826e215.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/$layout.svelte-d74f4488.css">
@@ -36,13 +36,13 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/$layout.svelte-0b2ec163.js"),
-						import("/./_app/pages/frameworks/[slug].svelte-ff29bfa7.js")
+						import("/./_app/pages/designs/[slug].svelte-1873b4c0.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/frameworks/react",
+						path: "/designs/material",
 						query: new URLSearchParams(""),
-						params: {"slug":"react"}
+						params: {"slug":"material"}
 					}
 				}
 			});
@@ -58,12 +58,12 @@
 <div class="relative bg-gray-900"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center py-4 md:justify-start md:space-x-10"><div class="flex justify-start lg:w-0 lg:flex-1"><a href="/" class="text-white font-bold text-xl">Lighthouse Results</a></div>
 	<div class="-mr-2 -my-2 md:hidden"><button type="button" class="rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:text-white" aria-expanded="false"><span class="sr-only">Open menu</span>
 			<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
-	<nav class="hidden md:flex space-x-10"><div class="relative"><button type="button" class="group rounded-md inline-flex items-center text-base font-medium text-gray-200 hover:text-white text-white" aria-expanded="false"><span>Frameworks</span>
+	<nav class="hidden md:flex space-x-10"><div class="relative"><button type="button" class="group rounded-md inline-flex items-center text-base font-medium text-gray-200 hover:text-white  text-gray-200" aria-expanded="false"><span>Frameworks</span>
 				<svg class="text-gray-200 ml-2 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 
 			</div>
 
-		<div class="relative"><button type="button" class="group rounded-md inline-flex items-center text-base font-medium text-gray-200 hover:text-white  text-gray-200" aria-expanded="false"><span>Designs</span>
+		<div class="relative"><button type="button" class="group rounded-md inline-flex items-center text-base font-medium text-gray-200 hover:text-white text-white" aria-expanded="false"><span>Designs</span>
 				<svg class="text-gray-200 ml-2 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 
 			</div></nav>
@@ -74,35 +74,24 @@
 
 <main>
 
-<div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8"><div class="lg:flex lg:items-center lg:justify-between"><span class="flex-shrink-0 h-12 w-12 mr-4"><svg viewBox="175.7 78 490.6 436.9" xmlns="http://www.w3.org/2000/svg"><g fill="#61dafb"><path d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z"/><circle cx="420.9" cy="296.5" r="45.7"/></g></svg></span>
-	<div class="flex-1 min-w-0"><h2 class="flex text-2xl font-bold leading-12 text-gray-900 sm:text-3xl sm:truncate">React Lighthouse Results
+<div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8"><div class="lg:flex lg:items-center lg:justify-between"><span class="flex-shrink-0 h-12 w-12 mr-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="none" fill-rule="evenodd"><circle cx="256" cy="256" fill="gray" fill-opacity=".7" r="256"/><path d="M79.277 79.277h353.446v353.446H79.277z" fill="silver" fill-opacity=".7"/><path d="M427.619 79.277H84.38L256 422.515z" fill="#fff" fill-opacity=".8"/></g></svg></span>
+	<div class="flex-1 min-w-0"><h2 class="flex text-2xl font-bold leading-12 text-gray-900 sm:text-3xl sm:truncate">Material Lighthouse Results
 		</h2>
 		<div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6"><div class="mt-2 flex items-center text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-				<a href="https://reactjs.org" target="_blank" rel="noopener">https://reactjs.org</a></div></div></div></div></div>
+				<a href="https://material.io" target="_blank" rel="noopener">https://material.io</a></div></div></div></div></div>
 	<br>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 overflow-x-scroll"><table class="min-w-full divide-y divide-gray-200"><thead class="bg-gray-50"><tr><th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Framework &amp; Design</th>
 		<th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">SPA</th><th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">SSR</th><th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Static</th></tr></thead>
-<tbody class="bg-white divide-y divide-gray-200"><tr><th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"><div class="text-sm text-gray-900"><a class="font-semibold" href="https://github.com/lighthouse-test/gatsby" rel="noopener" target="_blank">Gatsby</a></div>
+<tbody class="bg-white divide-y divide-gray-200"><tr><th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"><div class="text-sm text-gray-900"><a class="font-semibold" href="https://github.com/lighthouse-test/angular-material" rel="noopener" target="_blank">Angular Material</a></div>
 				<div class="text-sm text-gray-500">
-					
+					<small class="hidden lg:inline-flex">[<a href="/designs/material">Material</a>]</small>
 				</div></th>
-			<td class="px-6 py-4 whitespace-nowrap text-right"><div class="text-sm font-bold text-gray-500"><small>N/A</small>
-						</div>
-				</td><td class="px-6 py-4 whitespace-nowrap text-right"><div class="text-sm font-bold text-gray-500"><small>N/A</small>
-						</div>
-				</td><td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/gatsby/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Gatsby lighthouse performance result" src="https://lighthouse-test.github.io/gatsby/static/_lighthouse/_.performance.svg">
+			<td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/angular-material/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular Material lighthouse performance result" src="https://lighthouse-test.github.io/angular-material/spa/_lighthouse/_.performance.svg">
 						</a>
-				</td>
-		</tr><tr><th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"><div class="text-sm text-gray-900"><a class="font-semibold" href="https://github.com/lighthouse-test/next" rel="noopener" target="_blank">Next</a></div>
-				<div class="text-sm text-gray-500">
-					
-				</div></th>
-			<td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/next/spa/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/spa/_lighthouse/_.performance.svg">
+				</td><td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/angular-material/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular Material lighthouse performance result" src="https://lighthouse-test.github.io/angular-material/ssr/_lighthouse/_.performance.svg">
 						</a>
-				</td><td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/ssr/_lighthouse/_.performance.svg">
-						</a>
-				</td><td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/next/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Next lighthouse performance result" src="https://lighthouse-test.github.io/next/static/_lighthouse/_.performance.svg">
+				</td><td class="px-6 py-4 whitespace-nowrap text-right"><a href="https://lighthouse-test.github.io/angular-material/static/_lighthouse/_.report.html" rel="noopener" target="_blank"><img class="badge float-right w-28 max-w-max" width="112" height="20" alt="Angular Material lighthouse performance result" src="https://lighthouse-test.github.io/angular-material/static/_lighthouse/_.performance.svg">
 						</a>
 				</td>
 		</tr></tbody></table></div>

@@ -1,11 +1,11 @@
 [
   {
-    "url": "http://localhost:45195/",
+    "url": "http://localhost:45529/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.75,
+      "performance": 0.9,
       "accessibility": 1,
       "best-practices": 1,
       "seo": 1,
@@ -13,7 +13,7 @@
     }
   },
   {
-    "url": "http://localhost:45195/",
+    "url": "http://localhost:45529/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.json",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "url": "http://localhost:45195/",
+    "url": "http://localhost:45529/",
     "isRepresentativeRun": true,
     "htmlPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/lighthouse-test.github.io/lighthouse-test.github.io/build/_lighthouse/_.report.json",
