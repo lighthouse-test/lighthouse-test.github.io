@@ -8,6 +8,7 @@
 	$: {
 		if ($navigating) {
 			showMobileMenu = false;
+			currentMenu = null;
 		}
 	}
 
@@ -107,7 +108,7 @@
 					{/if}
 				</div>
 
-				<!-- <div class="relative">
+				<div class="relative">
 					<button
 						type="button"
 						class="group rounded-md inline-flex items-center text-base font-medium text-gray-200 hover:text-white"
@@ -158,7 +159,7 @@
 							</div>
 						</div>
 					{/if}
-				</div> -->
+				</div>
 			</nav>
 			<div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
 				<a
@@ -241,7 +242,7 @@
 						</nav>
 					</div>
 				</div>
-				<!-- <div class="py-6 px-5 space-y-6">
+				<div class="py-6 px-5 space-y-6">
 					<div class="grid grid-cols-2 gap-y-4 gap-x-8">
 						{#each DESIGN_TAGS as tag}
 							<a
@@ -250,7 +251,7 @@
 							>
 						{/each}
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	{/if}

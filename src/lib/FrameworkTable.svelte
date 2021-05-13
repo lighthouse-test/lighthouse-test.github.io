@@ -79,13 +79,13 @@
 						<div class="text-sm text-gray-500">
 							{#if !tag}
 								<small class="hidden lg:inline-flex"
-									>[<a href={'frameworks/' + framework.techTag.slug}>{framework.techTag.name}</a
+									>[<a href={'/frameworks/' + framework.techTag.slug}>{framework.techTag.name}</a
 									>]</small
 								>
 							{/if}
 							{#if framework.designTag}
 								<small class="hidden lg:inline-flex"
-									>[<a href={'designs/' + framework.designTag.slug}>{framework.designTag.name}</a
+									>[<a href={'/designs/' + framework.designTag.slug}>{framework.designTag.name}</a
 									>]</small
 								>
 							{/if}

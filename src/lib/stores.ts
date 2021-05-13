@@ -44,13 +44,27 @@ export const TECH_TAGS: Tag[] = [
 	}
 ];
 
-export const DESIGN_TAGS: Tag[] = [];
+export const DESIGN_TAGS: Tag[] = [
+	{
+		name: 'Material',
+		slug: 'material',
+		web: 'https://material.io',
+		logo: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="none" fill-rule="evenodd"><circle cx="256" cy="256" fill="gray" fill-opacity=".7" r="256"/><path d="M79.277 79.277h353.446v353.446H79.277z" fill="silver" fill-opacity=".7"/><path d="M427.619 79.277H84.38L256 422.515z" fill="#fff" fill-opacity=".8"/></g></svg>'
+	}
+];
 
 
 export const FRAMEWORKS: Framework[] = [
 	{
 		name: 'Angular', slug: 'angular', web: 'https://angular.io',
 		techTag: TECH_TAGS.filter(tag => tag.slug === 'angular')[0],
+		modes: { spa: true, ssr: true, static: true }
+	},
+	{
+		name: 'Angular Material', slug: 'angular-material', web: 'https://angular.io',
+		techTag: TECH_TAGS.filter(tag => tag.slug === 'angular')[0],
+		designTag: DESIGN_TAGS.filter(tag => tag.slug === 'material')[0],
+		designImplementation: 'https://material.angular.io',
 		modes: { spa: true, ssr: true, static: true }
 	},
 	{
