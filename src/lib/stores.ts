@@ -73,8 +73,22 @@ export const FRAMEWORKS: Framework[] = [
 		modes: { spa: false, ssr: false, static: true }
 	},
 	{
+		name: 'Gatsby Material', slug: 'gatsby-material', web: 'https://www.gatsbyjs.com',
+		techTag: TECH_TAGS.filter(tag => tag.slug === 'react')[0],
+		designTag: DESIGN_TAGS.filter(tag => tag.slug === 'material')[0],
+		designImplementation: 'https://material-ui.com/',
+		modes: { spa: false, ssr: false, static: true }
+	},
+	{
 		name: 'Next', slug: 'next', web: 'https://nextjs.org',
 		techTag: TECH_TAGS.filter(tag => tag.slug === 'react')[0],
+		modes: { spa: true, ssr: true, static: true }
+	},
+	{
+		name: 'Next Material', slug: 'next-material', web: 'https://nextjs.org',
+		techTag: TECH_TAGS.filter(tag => tag.slug === 'react')[0],
+		designTag: DESIGN_TAGS.filter(tag => tag.slug === 'material')[0],
+		designImplementation: 'https://material-ui.com/',
 		modes: { spa: true, ssr: true, static: true }
 	},
 	{
